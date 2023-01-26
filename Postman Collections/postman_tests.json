@@ -16,6 +16,17 @@
 						"exec": [
 							"pm.test(\"Successful POST request\", () => {\r",
 							"  pm.expect(pm.response.code).to.be.oneOf([201,202])\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Successful POST Response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.description).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.activation_date).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.repeat).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData._id).to.be.a(\"string\");\r",
 							"});"
 						],
 						"type": "text/javascript"
