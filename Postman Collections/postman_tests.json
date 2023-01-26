@@ -224,6 +224,10 @@
 							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
 							"});\r",
 							"\r",
+							"pm.test(\"API response contains the expected header\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\", \"application/problem+json; charset=utf-8\");\r",
+							"});\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
