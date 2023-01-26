@@ -162,6 +162,43 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": null
+				},
+				{
+					"id": "33ef4fe7-3276-40d1-b595-bddbcc6a132b",
+					"name": "Create request-no Body",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
+					},
+					"status": "Unsupported Media Type",
+					"code": 415,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Jan 2023 19:20:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.13\",\n    \"title\": \"Unsupported Media Type\",\n    \"status\": 415,\n    \"traceId\": \"0HMNQNNCBEHIA:00000001\"\n}"
 				}
 			]
 		},
