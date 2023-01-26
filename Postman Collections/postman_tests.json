@@ -194,7 +194,8 @@
 						}
 					}
 				},
-				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
+				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items",
+				"description": "Property \"repeat\" in request body is missing \" before value"
 			},
 			"response": [
 				{
