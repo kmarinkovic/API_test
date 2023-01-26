@@ -12,13 +12,11 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6c67385e-ee5f-4e1d-9584-b7957f803046",
+						"id": "3b7dcdf2-bc7e-462d-8302-6500f67d9be5",
 						"exec": [
 							"pm.test(\"Successful POST request\", () => {\r",
 							"  pm.expect(pm.response.code).to.be.oneOf([201,202])\r",
-							"});\r",
-							"\r",
-							""
+							"});"
 						],
 						"type": "text/javascript"
 					}
