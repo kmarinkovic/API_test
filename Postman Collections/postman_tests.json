@@ -42,7 +42,74 @@
 				},
 				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "1bb125a7-b9df-482e-b2e4-e3250dc31972",
+					"name": "Create request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": \"weekly\",\r\n        \"status\": \"not completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Jan 2023 18:34:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Location",
+							"value": "/api/79867d1527f14b81ada642d3402104a2/items/63d2c79a07307e03e8c75ecf"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Range"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"name\": \"Item1\",\n    \"description\": \"This is a description of todo Item1\",\n    \"activation_date\": \"1674758042\",\n    \"repeat\": \"weekly\",\n    \"status\": \"not completed\",\n    \"_id\": \"63d2c79a07307e03e8c75ecf\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Create request-no Body",
