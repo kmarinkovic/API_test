@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "abc88f8b-443e-48cf-b6fe-729510d03aa6",
 		"name": "API_test",
+		"description": "#Introduction\n\n#Prerequisites\n\n#Setup",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
