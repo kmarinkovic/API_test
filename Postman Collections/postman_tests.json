@@ -129,7 +129,54 @@
 				},
 				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "a03fe5ae-e879-4a2a-81ab-ca42f35f134e",
+					"name": "Create request - syntax error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": weekly\"\r\n        \"status\": \"not completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Jan 2023 18:56:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"errors\": {\n        \"repeat\": [\n            \"Unexpected character encountered while parsing value: w. Path 'repeat', line 4, position 18.\"\n        ]\n    },\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"0HMNQNNCBEH2K:00000001\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Read all request",
