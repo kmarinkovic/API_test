@@ -23,7 +23,7 @@
 					}
 				}
 			],
-			"_postman_id": "346f8814-7aa4-4738-9cc3-56155c928fe2",
+			"id": "346f8814-7aa4-4738-9cc3-56155c928fe2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -74,7 +74,7 @@
 					}
 				}
 			],
-			"_postman_id": "f25276d3-5d55-485b-a114-302069020464",
+			"id": "f25276d3-5d55-485b-a114-302069020464",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -91,10 +91,25 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6c67385e-ee5f-4e1d-9584-b7957f803046",
+						"id": "fb9ed6f6-bff4-4762-ae7b-ef4eb93b8f3c",
 						"exec": [
-							"pm.test(\"Successful POST request\", () => {\r",
-							"  pm.expect(pm.response.code).to.be.oneOf([201,202])\r",
+							"pm.test(\"Unsuccessful POST request - syntax error\", () => {\r",
+							"  pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Response test\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.errors).to.be.a(\"array\");\r",
+							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.title).to.eql(\"One or more validation errors occured\");\r",
+							"  pm.expect(jsonData.status).to.be.an(\"number\");\r",
+							"  pm.expect(jsonData.status).to.eql(400);\r",
+							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type header is application/problem+json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/problem+json');\r",
 							"});\r",
 							"\r",
 							""
@@ -103,7 +118,7 @@
 					}
 				}
 			],
-			"_postman_id": "8eb13fcf-f008-4189-ab0e-76abdde7cbb1",
+			"id": "8eb13fcf-f008-4189-ab0e-76abdde7cbb1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -112,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": \"weekly\",\r\n        \"status\": \"not completed\",\r\n}",
+					"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": weekly\"\r\n        \"status\": \"not completed\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -139,7 +154,7 @@
 					}
 				}
 			],
-			"_postman_id": "eb24f823-4081-495d-8776-f4537d761134",
+			"id": "eb24f823-4081-495d-8776-f4537d761134",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -161,7 +176,7 @@
 		},
 		{
 			"name": "Read request",
-			"_postman_id": "418c2a7d-f22d-4abc-a67d-20abb858e2a5",
+			"id": "418c2a7d-f22d-4abc-a67d-20abb858e2a5",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -174,7 +189,7 @@
 		},
 		{
 			"name": "Update request",
-			"_postman_id": "28abbb73-bc77-4b77-b2cb-cb74179a28c9",
+			"id": "28abbb73-bc77-4b77-b2cb-cb74179a28c9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -187,7 +202,7 @@
 		},
 		{
 			"name": "Delete request",
-			"_postman_id": "ba0ff658-68c2-44df-a700-4215333b0710",
+			"id": "ba0ff658-68c2-44df-a700-4215333b0710",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
