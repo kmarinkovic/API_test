@@ -148,7 +148,22 @@
 				"header": [],
 				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "57fbd85b-0010-470a-bfc7-53f6c3124a45",
+					"name": "Create request-no Body",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "Create request - syntax error",
