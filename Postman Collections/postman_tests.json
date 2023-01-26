@@ -207,7 +207,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": weekly\"\r\n        \"status\": \"not completed\"\r\n}",
+							"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": weekly\",\r\n        \"status\": \"not completed\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
