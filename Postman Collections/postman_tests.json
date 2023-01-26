@@ -150,20 +150,6 @@
 			},
 			"response": [
 				{
-					"id": "ffebb127-9458-4577-a1cf-2c2ac5268797",
-					"name": "Create request-no Body",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
-					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"responseTime": null,
-					"body": null
-				},
-				{
 					"id": "33ef4fe7-3276-40d1-b595-bddbcc6a132b",
 					"name": "Create request-no Body",
 					"originalRequest": {
