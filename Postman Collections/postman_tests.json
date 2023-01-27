@@ -355,6 +355,23 @@
 		},
 		{
 			"name": "Read request",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fc4b791c-eb4e-40b8-8983-a3920b9c0d9a",
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: pm.environment.get(\"url\"),\r",
+							"    method: 'GET'\r",
+							"}, function (err, res) {\r",
+							"    pm.environment.set(\"id\", res.json()._id);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "418c2a7d-f22d-4abc-a67d-20abb858e2a5",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -362,7 +379,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/resource/id"
+				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items/{{id}}"
 			},
 			"response": []
 		},
