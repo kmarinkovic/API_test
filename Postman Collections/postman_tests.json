@@ -375,26 +375,16 @@
 						"exec": [
 							"/*pm.sendRequest({\r",
 							"    url: pm.environment.get(\"url\"),\r",
-							"    method: 'GET'\r",
+							"    method: 'POST'\r",
 							"}, function (err, res) {\r",
 							"    pm.environment.set(\"access_token\", res.json().id);\r",
 							"});\r",
+							"\r",
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.environment.set(\"id\", jsonData._id);\r",
 							"*/\r",
-							"\r",
-							"\r",
-							"const getRequest = {\r",
-							"  url: pm.globals.get(\"url\"),\r",
-							"  method: 'GET',\r",
-							"}\r",
-							"\r",
-							"pm.globals.set(\"name\", '');\r",
-							"pm.sendRequest(getRequest, function (err, res) {\r",
-							"    const json = err ? false : res.json();\r",
-							"    if (json > 0) {\r",
-							"        pm.globals.set(\"name\", json().name);\r",
-							"    } else {\r",
-							"        console.error('Unable to get the name');\r",
-							"    }});"
+							""
 						],
 						"type": "text/javascript"
 					}
