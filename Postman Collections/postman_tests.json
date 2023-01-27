@@ -331,7 +331,7 @@
 							"\r",
 							"pm.test(\"My test\", function(){\r",
 							"var jsonData = JSON.parse(responseBody);\r",
-							"pm.setEnvironmentVariable(\"name\", jsonData().name);\r",
+							"pm.setEnvironmentVariable(\"name\", jsonData(1).name);\r",
 							"console.log(name)\r",
 							"});"
 						],
