@@ -12,10 +12,11 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3b7dcdf2-bc7e-462d-8302-6500f67d9be5",
+						"id": "3c4cd50e-16d1-469c-b10f-f3c0b98800e8",
 						"exec": [
 							"pm.test(\"Successful POST request\", () => {\r",
-							"  pm.expect(pm.response.code).to.be.oneOf([201,202])\r",
+							"    const expectedStatusCodes = [201,202];\r",
+							"  pm.expect(pm.response.code).to.be.oneOf(expectedStatusCodes)\r",
 							"});\r",
 							"\r",
 							"const jsonData = pm.response.json();\r",
@@ -27,7 +28,21 @@
 							"  pm.expect(jsonData.repeat).to.be.a(\"string\");\r",
 							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
 							"  pm.expect(jsonData._id).to.be.a(\"string\");\r",
-							"});"
+							"});\r",
+							"\r",
+							"pm.test(\"API responds within the expected treshhold\", () => {\r",
+							"  // set the response time in milliseconds\r",
+							"  const expectedTimeInMilliseconds = 500;\r",
+							"\r",
+							"  pm.expect(pm.response.responseTime).to.be.lessThan(\r",
+							"    expectedTimeInMilliseconds + 1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API response contains the expected header\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+							"});\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -49,7 +64,7 @@
 						}
 					}
 				},
-				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items",
+				"url": "{{url}}/items",
 				"description": "POST request for creation of new item in todo list. Request body consists of 5 properties:\n- \"name\" - name of new item\n- \"description\" - short description of to-do item\n- \"activation-date\" - date when item becomes visible to user\n- \"repeat\" - occurence schedule of created item (daily, weekly, monthly,...)\n- \"status\" - status of the item in to-do list (completed, not completed)"
 			},
 			"response": [
