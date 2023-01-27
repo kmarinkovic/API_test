@@ -327,6 +327,12 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function(){\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"My test\", function(){\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.setEnvironmentVariable(\"name\", jsonData().name);\r",
+							"console.log(name)\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -342,14 +348,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@domain.com\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
+				"url": "{{url}}"
 			},
 			"response": []
 		},
