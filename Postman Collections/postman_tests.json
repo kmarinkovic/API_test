@@ -1055,7 +1055,7 @@
 							"  pm.expect(jsonData).to.be.an(\"object\");\r",
 							"  pm.expect(jsonData.errors).to.have.nested.property('status');\r",
 							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
-							"  //pm.expect(jsonData.title).to.eql(\"One or more validation errors occured\");\r",
+							"  pm.expect(jsonData.title).to.eql(\"One or more validation errors occured\");\r",
 							"  pm.expect(jsonData.status).to.be.a(\"number\");\r",
 							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
 							"});\r",
