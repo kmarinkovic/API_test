@@ -179,7 +179,7 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "{{url}}/items"
+				"url": "{{url}}"
 			},
 			"response": [
 				{
