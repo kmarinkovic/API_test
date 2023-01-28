@@ -438,6 +438,51 @@
 			]
 		},
 		{
+			"name": "Read all request - non existing endpoint",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "04d28972-b1fd-4d44-9b7a-43289b3f9820",
+						"exec": [
+							"pm.test(\"Unsuccessful GET request - non existing endpoint\", () => {\r",
+							"  pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is string\", function () {\r",
+							"  pm.response.to.have.body(\"Endpoint doesn\\'t exist.\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"/*\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Response test\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.type).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.title).to.eql(\"Unsupported Media Type\");\r",
+							"  pm.expect(jsonData.status).to.be.an(\"number\");\r",
+							"  pm.expect(jsonData.status).to.eql(415);\r",
+							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
+							"});\r",
+							"*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "e188fc9d-5d3d-400d-9032-e732a4df1cb5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://crudcrud.com/api/endpoint/items"
+			},
+			"response": []
+		},
+		{
 			"name": "Read request",
 			"event": [
 				{
@@ -589,19 +634,6 @@
 				"method": "DELETE",
 				"header": [],
 				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/resource/id"
-			},
-			"response": []
-		},
-		{
-			"name": "Read all request - non existing endpoint",
-			"id": "e188fc9d-5d3d-400d-9032-e732a4df1cb5",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "https://crudcrud.com/api/endpoint/items"
 			},
 			"response": []
 		}
