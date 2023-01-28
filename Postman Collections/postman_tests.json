@@ -839,6 +839,109 @@
 			]
 		},
 		{
+			"name": "Read request by id after update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "93da894e-b042-4521-ac88-20759d045f68",
+						"exec": [
+							"pm.test(\"Response has a JSON body\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Check updated property\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.description).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.activation_date).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.repeat).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.status).to.eql(\"completed\");\r",
+							"  pm.expect(jsonData._id).to.eql(pm.environment.get(\"id\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f3644a22-8db4-42bc-ba4b-75d6d5c6fc3c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "be5399b8-f85e-4a52-9e7b-27b12388722d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/{{id}}"
+			},
+			"response": [
+				{
+					"id": "4dca1256-8580-40b5-b99e-17d96154deda",
+					"name": "Read request by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/{{id}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 18:42:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Range"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"_id\": \"63d55b5507307e03e8c76a3e\",\n    \"name\": \"Item1\",\n    \"description\": \"This is a description of todo Item1\",\n    \"activation_date\": \"1674926933\",\n    \"repeat\": \"weekly\",\n    \"status\": \"not completed\"\n}"
+				}
+			]
+		},
+		{
 			"name": "Update request by id - non existing id",
 			"event": [
 				{
@@ -946,67 +1049,26 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": null
-				}
-			]
-		},
-		{
-			"name": "Read request by id after update",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "93da894e-b042-4521-ac88-20759d045f68",
-						"exec": [
-							"pm.test(\"Response has a JSON body\", function () {\r",
-							"    pm.response.to.be.json;\r",
-							"});\r",
-							"\r",
-							"const jsonData = pm.response.json();\r",
-							"pm.test(\"Check updated property\", () => {\r",
-							"  pm.expect(jsonData).to.be.an(\"object\");\r",
-							"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.description).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.activation_date).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.repeat).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.status).to.eql(\"completed\");\r",
-							"  pm.expect(jsonData._id).to.eql(pm.environment.get(\"id\"));\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
 				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "f3644a22-8db4-42bc-ba4b-75d6d5c6fc3c",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "be5399b8-f85e-4a52-9e7b-27b12388722d",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{url}}/{{id}}"
-			},
-			"response": [
-				{
-					"id": "4dca1256-8580-40b5-b99e-17d96154deda",
-					"name": "Read request by id",
+					"id": "37ab4b2d-c6c4-47ee-a3c9-43ce534451a3",
+					"name": "Update request by id - non existing id",
 					"originalRequest": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": "{{url}}/{{id}}"
+						"body": {
+							"mode": "raw",
+							"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": \"weekly\",\r\n        \"status\": \"completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
 					},
-					"status": "OK",
-					"code": 200,
+					"status": "Not Found",
+					"code": 404,
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
@@ -1015,11 +1077,11 @@
 						},
 						{
 							"key": "Date",
-							"value": "Sat, 28 Jan 2023 18:42:40 GMT"
+							"value": "Sat, 28 Jan 2023 20:53:35 GMT"
 						},
 						{
 							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
+							"value": "application/problem+json; charset=utf-8"
 						},
 						{
 							"key": "Transfer-Encoding",
@@ -1028,27 +1090,11 @@
 						{
 							"key": "Connection",
 							"value": "keep-alive"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
-						},
-						{
-							"key": "Access-Control-Expose-Headers",
-							"value": "Content-Length,Content-Range"
 						}
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "{\n    \"_id\": \"63d55b5507307e03e8c76a3e\",\n    \"name\": \"Item1\",\n    \"description\": \"This is a description of todo Item1\",\n    \"activation_date\": \"1674926933\",\n    \"repeat\": \"weekly\",\n    \"status\": \"not completed\"\n}"
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"0HMNQNNCBFJCU:00000001\"\n}"
 				}
 			]
 		},
