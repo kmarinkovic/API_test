@@ -45,7 +45,6 @@
 							"pm.test(\"Extract created item id\", function(){\r",
 							"var jsonData = JSON.parse(responseBody);\r",
 							"pm.environment.set(\"id\", jsonData._id);\r",
-							"console.log(id);\r",
 							"});\r",
 							"\r",
 							""
