@@ -1242,7 +1242,45 @@
 				"header": [],
 				"url": "{{url}}/{{id}}"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "63fb6b42-64cf-45b3-a9b7-a35888563197",
+					"name": "Read request by id after delete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/{{id}}"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 21:57:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"0HMNQNNCBFJQC:00000001\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Delete request by id - non existing id",
