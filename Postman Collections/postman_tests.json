@@ -179,7 +179,7 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items"
+				"url": "{{url}}/items"
 			},
 			"response": [
 				{
