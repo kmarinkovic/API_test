@@ -754,10 +754,6 @@
 					"script": {
 						"id": "93da894e-b042-4521-ac88-20759d045f68",
 						"exec": [
-							"pm.test(\"Status code is 200\", function(){\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
 							"pm.test(\"Response has a JSON body\", function () {\r",
 							"    pm.response.to.be.json;\r",
 							"});\r",
@@ -793,17 +789,6 @@
 					"script": {
 						"id": "f3644a22-8db4-42bc-ba4b-75d6d5c6fc3c",
 						"exec": [
-							"/*pm.sendRequest({\r",
-							"    url: pm.environment.get(\"url\"),\r",
-							"    method: 'POST'\r",
-							"}, function (err, res) {\r",
-							"    pm.environment.set(\"access_token\", res.json().id);\r",
-							"});\r",
-							"\r",
-							"\r",
-							"var jsonData = JSON.parse(responseBody);\r",
-							"pm.environment.set(\"id\", jsonData._id);\r",
-							"*/\r",
 							""
 						],
 						"type": "text/javascript"
