@@ -1121,7 +1121,7 @@
 			]
 		},
 		{
-			"name": "Delete request",
+			"name": "Delete request by id",
 			"event": [
 				{
 					"listen": "test",
