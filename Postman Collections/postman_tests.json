@@ -69,7 +69,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/items",
+				"url": "{{url}}",
 				"description": "POST request for creation of new item in todo list. Request body consists of 5 properties:\n- \"name\" - name of new item\n- \"description\" - short description of to-do item\n- \"activation-date\" - date when item becomes visible to user\n- \"repeat\" - occurence schedule of created item (daily, weekly, monthly,...)\n- \"status\" - status of the item in to-do list (completed, not completed)"
 			},
 			"response": [
