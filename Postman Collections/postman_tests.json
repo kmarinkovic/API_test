@@ -370,7 +370,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/items"
+				"url": "{{url}}"
 			},
 			"response": [
 				{
