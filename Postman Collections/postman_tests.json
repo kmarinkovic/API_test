@@ -1215,20 +1215,8 @@
 					"script": {
 						"id": "93da894e-b042-4521-ac88-20759d045f68",
 						"exec": [
-							"pm.test(\"Response has a JSON body\", function () {\r",
-							"    pm.response.to.be.json;\r",
-							"});\r",
-							"\r",
-							"const jsonData = pm.response.json();\r",
-							"pm.test(\"Check updated property\", () => {\r",
-							"  pm.expect(jsonData).to.be.an(\"object\");\r",
-							"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.description).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.activation_date).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.repeat).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.status).to.eql(\"completed\");\r",
-							"  pm.expect(jsonData._id).to.eql(pm.environment.get(\"id\"));\r",
+							"pm.test(\"Unsuccessful GET request - non existing id\", () => {\r",
+							"  pm.response.to.have.status(404);\r",
 							"});"
 						],
 						"type": "text/javascript"
