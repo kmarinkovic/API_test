@@ -1240,7 +1240,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
 			},
 			"response": [
 				{
