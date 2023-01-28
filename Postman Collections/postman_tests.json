@@ -525,7 +525,7 @@
 			]
 		},
 		{
-			"name": "Read request",
+			"name": "Read request by id",
 			"event": [
 				{
 					"listen": "test",
