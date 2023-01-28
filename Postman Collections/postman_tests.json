@@ -597,7 +597,61 @@
 				"header": [],
 				"url": "{{url}}/{{id}}"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "1412c5f2-1b8e-40cf-ba26-ce68c23ae7dd",
+					"name": "Read request by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/{{id}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 18:42:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Range"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"_id\": \"63d55b5507307e03e8c76a3e\",\n    \"name\": \"Item1\",\n    \"description\": \"This is a description of todo Item1\",\n    \"activation_date\": \"1674926933\",\n    \"repeat\": \"weekly\",\n    \"status\": \"not completed\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Update request",
