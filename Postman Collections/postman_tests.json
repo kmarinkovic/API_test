@@ -846,18 +846,24 @@
 					"script": {
 						"id": "f45cc333-e4c4-46bf-bffd-85b02d9862df",
 						"exec": [
-							"pm.test(\"Successful PUT request\", () => {\r",
-							"   pm.response.to.have.status(200);\r",
+							"pm.test(\"Unsuccessful PUT request - non existing id\", () => {\r",
+							"  pm.response.to.have.status(404);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"API responds within the expected treshhold\", () => {\r",
-							"  // set the response time in milliseconds\r",
-							"  const expectedTimeInMilliseconds = 500;\r",
-							"\r",
-							"  pm.expect(pm.response.responseTime).to.be.lessThan(\r",
-							"    expectedTimeInMilliseconds + 1);\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Response test\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.type).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.title).to.eql(\"Not Found\");\r",
+							"  pm.expect(jsonData.status).to.be.an(\"number\");\r",
+							"  pm.expect(jsonData.status).to.eql(404);\r",
+							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
 							"});\r",
 							"\r",
+							"pm.test(\"API response contains the expected header\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\", \"application/problem+json; charset=utf-8\");\r",
+							"});\r",
 							""
 						],
 						"type": "text/javascript"
@@ -880,7 +886,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
 			},
 			"response": [
 				{
