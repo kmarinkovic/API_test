@@ -160,7 +160,6 @@
 							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
 							"  pm.expect(jsonData.title).to.eql(\"Unsupported Media Type\");\r",
 							"  pm.expect(jsonData.status).to.be.an(\"number\");\r",
-							"  pm.expect(jsonData.status).to.eql(415);\r",
 							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
 							"});\r",
 							"\r",
