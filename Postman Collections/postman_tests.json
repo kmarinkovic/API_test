@@ -270,7 +270,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/items",
+				"url": "{{url}}",
 				"description": "Property \"repeat\" in request body is missing \" before value"
 			},
 			"response": [
