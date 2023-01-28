@@ -591,6 +591,19 @@
 				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/resource/id"
 			},
 			"response": []
+		},
+		{
+			"name": "Read all request - non existing endpoint",
+			"id": "e188fc9d-5d3d-400d-9032-e732a4df1cb5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://crudcrud.com/api/endpoint/items"
+			},
+			"response": []
 		}
 	]
 }
