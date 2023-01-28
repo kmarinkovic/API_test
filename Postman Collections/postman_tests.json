@@ -334,7 +334,21 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							""
+							"pm.test(\"Response has a JSON body\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API responds within the expected treshhold\", () => {\r",
+							"  // set the response time in milliseconds\r",
+							"  const expectedTimeInMilliseconds = 500;\r",
+							"\r",
+							"  pm.expect(pm.response.responseTime).to.be.lessThan(\r",
+							"    expectedTimeInMilliseconds + 1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API response contains the expected header\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -356,7 +370,7 @@
 						}
 					}
 				},
-				"url": "{{url}}"
+				"url": "{{url}}/items"
 			},
 			"response": [
 				{
