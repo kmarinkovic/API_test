@@ -445,7 +445,36 @@
 					"script": {
 						"id": "93da894e-b042-4521-ac88-20759d045f68",
 						"exec": [
-							""
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has a JSON body\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API responds within the expected treshhold\", () => {\r",
+							"  // set the response time in milliseconds\r",
+							"  const expectedTimeInMilliseconds = 500;\r",
+							"\r",
+							"  pm.expect(pm.response.responseTime).to.be.lessThan(\r",
+							"    expectedTimeInMilliseconds + 1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API response contains the expected header\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Successful POST Response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.description).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.activation_date).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.repeat).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData._id).to.be.a(\"string\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
