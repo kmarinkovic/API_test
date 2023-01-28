@@ -328,17 +328,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e4c44490-0b11-4cf6-88c5-d71adf395516",
+						"id": "706229cb-39b8-4bbb-b812-fe7c3baa7d53",
 						"exec": [
 							"pm.test(\"Status code is 200\", function(){\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"My test\", function(){\r",
-							"var jsonData = JSON.parse(responseBody);\r",
-							"pm.setEnvironmentVariable(\"name\", jsonData(1).name);\r",
-							"console.log(name)\r",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
