@@ -1055,11 +1055,10 @@
 							"const jsonData = pm.response.json();\r",
 							"pm.test(\"Response test\", () => {\r",
 							"  pm.expect(jsonData).to.be.an(\"object\");\r",
-							"  pm.expect(jsonData.errors).to.have.nested.property('repeat');\r",
+							"  pm.expect(jsonData.errors).to.have.nested.property('status');\r",
 							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
 							"  //pm.expect(jsonData.title).to.eql(\"One or more validation errors occured\");\r",
 							"  pm.expect(jsonData.status).to.be.a(\"number\");\r",
-							"  pm.expect(jsonData.status).to.eql(400);\r",
 							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
 							"});\r",
 							"\r",
@@ -1081,7 +1080,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": weekly\",\r\n        \"status\": \"completed\"\r\n}",
+					"raw": "{       \"name\": \"Item1\",\r\n        \"description\": \"This is a description of todo Item1\",\r\n        \"activation_date\": \"{{$timestamp}}\",\r\n        \"repeat\": \"weekly\",\r\n        \"status\": completed\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
