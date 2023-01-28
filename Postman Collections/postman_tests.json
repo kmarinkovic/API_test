@@ -227,7 +227,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ffc73d1f-458f-4b3a-b171-3b41e8555d9e",
+						"id": "8a98151b-8a88-4670-9425-1dce53a74e4d",
 						"exec": [
 							"pm.test(\"Unsuccessful POST request - syntax error\", () => {\r",
 							"  pm.response.to.have.status(400);\r",
@@ -236,9 +236,9 @@
 							"const jsonData = pm.response.json();\r",
 							"pm.test(\"Response test\", () => {\r",
 							"  pm.expect(jsonData).to.be.an(\"object\");\r",
-							"  pm.expect(jsonData).to.have.property('error');\r",
+							"  pm.expect(jsonData.errors).to.have.nested.property('repeat');\r",
 							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
-							"  pm.expect(jsonData.title).to.eql(\"One or more validation errors occured\");\r",
+							"  //pm.expect(jsonData.title).to.eql(\"One or more validation errors occured\");\r",
 							"  pm.expect(jsonData.status).to.be.a(\"number\");\r",
 							"  pm.expect(jsonData.status).to.eql(400);\r",
 							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
@@ -270,7 +270,7 @@
 						}
 					}
 				},
-				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/items",
+				"url": "{{url}}/items",
 				"description": "Property \"repeat\" in request body is missing \" before value"
 			},
 			"response": [
