@@ -484,7 +484,45 @@
 				"header": [],
 				"url": "https://crudcrud.com/api/endpoint/items"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "3667fc92-9d39-43d0-bcdd-9db64323364f",
+					"name": "Read all request - non existing endpoint",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://crudcrud.com/api/endpoint/items"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 18:31:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "Endpoint doesn't exist."
+				}
+			]
 		},
 		{
 			"name": "Read request",
