@@ -1206,6 +1206,93 @@
 					"body": null
 				}
 			]
+		},
+		{
+			"name": "Delete request by id - non existing id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5a35685-235b-4565-a39a-7c06cda7d356",
+						"exec": [
+							"pm.test(\"Successful DELETE request\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API responds within the expected treshhold\", () => {\r",
+							"  // set the response time in milliseconds\r",
+							"  const expectedTimeInMilliseconds = 500;\r",
+							"\r",
+							"  pm.expect(pm.response.responseTime).to.be.lessThan(\r",
+							"    expectedTimeInMilliseconds + 1);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "6bbe0f0f-79d2-4a6a-b4ee-a1f1d7fea9f5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{url}}/{{id}}"
+			},
+			"response": [
+				{
+					"id": "973433dc-05c5-497d-8de6-f98473c11dc0",
+					"name": "Delete request by id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/{{id}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 21:50:15 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Range"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
 		}
 	]
 }
