@@ -678,6 +678,19 @@
 				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/resource/id"
 			},
 			"response": []
+		},
+		{
+			"name": "Read request by id - non existing id",
+			"id": "2019b816-8b06-4230-92ff-596aaa19a784",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
+			},
+			"response": []
 		}
 	]
 }
