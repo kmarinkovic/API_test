@@ -1122,6 +1122,30 @@
 		},
 		{
 			"name": "Delete request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5a35685-235b-4565-a39a-7c06cda7d356",
+						"exec": [
+							"pm.test(\"Successful DELETE request\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API responds within the expected treshhold\", () => {\r",
+							"  // set the response time in milliseconds\r",
+							"  const expectedTimeInMilliseconds = 500;\r",
+							"\r",
+							"  pm.expect(pm.response.responseTime).to.be.lessThan(\r",
+							"    expectedTimeInMilliseconds + 1);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "ba0ff658-68c2-44df-a700-4215333b0710",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
