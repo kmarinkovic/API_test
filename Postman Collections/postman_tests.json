@@ -696,7 +696,7 @@
 			"response": []
 		},
 		{
-			"name": "Update request",
+			"name": "Update request by id",
 			"id": "28abbb73-bc77-4b77-b2cb-cb74179a28c9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
