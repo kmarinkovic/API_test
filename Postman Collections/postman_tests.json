@@ -767,7 +767,7 @@
 							"  pm.expect(jsonData.repeat).to.be.a(\"string\");\r",
 							"  pm.expect(jsonData.status).to.be.a(\"string\");\r",
 							"  pm.expect(jsonData.status).to.eql(\"completed\");\r",
-							"  pm.expect(jsonData._id).to.eql(\"id\");\r",
+							"  pm.expect(jsonData._id).to.eql(pm.environment.get(\"id\"));\r",
 							"});"
 						],
 						"type": "text/javascript"
