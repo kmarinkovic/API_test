@@ -358,7 +358,93 @@
 				},
 				"url": "{{url}}"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "f3221f86-7199-4f73-9029-c181d88ab8cc",
+					"name": "Read all request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				},
+				{
+					"id": "f0c3f806-e9a9-4921-95ff-4fb041d76a87",
+					"name": "Read all request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 17:37:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Range"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\n    {\n        \"_id\": \"63d26e1c07307e03e8c75d49\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674735132\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2768207307e03e8c75d87\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674737282\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d276c707307e03e8c75d89\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674737351\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d277f307307e03e8c75d8c\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674737652\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2aa0107307e03e8c75e6c\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674750466\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2aa4607307e03e8c75e6d\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674750534\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2c0d907307e03e8c75eb7\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674756313\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2c79a07307e03e8c75ecf\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674758042\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2d60607307e03e8c75f67\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674761734\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2d7b307307e03e8c75f85\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762163\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2d7cb07307e03e8c75f86\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762187\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2d83407307e03e8c75f89\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762293\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2da6207307e03e8c75f91\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762850\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2da6b07307e03e8c75f92\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762859\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2da7307307e03e8c75f94\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762867\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2da7a07307e03e8c75f95\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762874\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2da8007307e03e8c75f97\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762881\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2da8607307e03e8c75f98\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762887\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2daaf07307e03e8c75f9a\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762927\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2dacf07307e03e8c75f9b\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674762959\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2db4a07307e03e8c75f9e\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674763082\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2db8d07307e03e8c75fa0\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674763149\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2db8f07307e03e8c75fa1\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674763152\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2dbfd07307e03e8c75fa2\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674763261\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2dc1007307e03e8c75fa3\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674763280\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d2dd8207307e03e8c75fa4\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674763650\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d3b9ca07307e03e8c76397\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674820041\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d3fd8d07307e03e8c76575\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674837388\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d40f4f07307e03e8c765e0\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674841934\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d40f7707307e03e8c765e2\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674841974\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d40fb907307e03e8c765e3\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674842040\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d40fe907307e03e8c765e5\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674842089\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d4110607307e03e8c765e9\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674842374\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d432a407307e03e8c7664d\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674850980\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5254707307e03e8c768a5\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674913095\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5258607307e03e8c768a7\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674913158\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d52abc07307e03e8c768ae\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674914492\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d52e1d07307e03e8c768b3\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915358\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d52e6607307e03e8c768b4\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915430\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d52f7f07307e03e8c768b6\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915711\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d52fad07307e03e8c768b7\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915757\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d52fe807307e03e8c768b9\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915817\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5300607307e03e8c768ba\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915847\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5306b07307e03e8c768bc\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915947\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5307207307e03e8c768bd\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674915955\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5367907307e03e8c768ca\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674917497\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5368c07307e03e8c768cb\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674917516\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d536ae07307e03e8c768cc\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674917550\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d536b107307e03e8c768cd\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674917554\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5372607307e03e8c768ce\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674917671\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d5374f07307e03e8c768cf\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674917711\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d55b5507307e03e8c76a3e\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674926933\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d55b6f07307e03e8c76a3f\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674926960\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    },\n    {\n        \"_id\": \"63d55bb807307e03e8c76a42\",\n        \"name\": \"Item1\",\n        \"description\": \"This is a description of todo Item1\",\n        \"activation_date\": \"1674927032\",\n        \"repeat\": \"weekly\",\n        \"status\": \"not completed\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Read request",
