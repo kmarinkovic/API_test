@@ -1129,7 +1129,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "https://crudcrud.com/api/79867d1527f14b81ada642d3402104a2/resource/id"
+				"url": "{{url}}/{{id}}"
 			},
 			"response": []
 		}
