@@ -873,7 +873,61 @@
 				"url": "{{url}}/{{id}}",
 				"description": "GET request for reading single entity defined by id after UPDATE operation has been executed to check changed value."
 			},
-			"response": []
+			"response": [
+				{
+					"id": "278925d9-2c44-447f-b61e-18c5e05510b8",
+					"name": "Read request by id after update",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/{{id}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Jan 2023 17:48:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Range"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"_id\": \"63d6aa6907307e03e8c76daa\",\n    \"name\": \"Item1\",\n    \"description\": \"This is a description of todo Item1\",\n    \"activation_date\": \"1675014508\",\n    \"repeat\": \"weekly\",\n    \"status\": \"completed\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Update request by id - non existing id",
