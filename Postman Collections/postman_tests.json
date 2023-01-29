@@ -819,7 +819,7 @@
 					"script": {
 						"id": "93da894e-b042-4521-ac88-20759d045f68",
 						"exec": [
-							"pm.test(\"Response has a JSON body\", function () {\r",
+							"pm.test(\"GET response has a JSON body\", function () {\r",
 							"    pm.response.to.be.json;\r",
 							"});\r",
 							"\r",
