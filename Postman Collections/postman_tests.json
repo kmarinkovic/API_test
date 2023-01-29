@@ -762,7 +762,7 @@
 					}
 				},
 				"url": "{{url}}/{{id}}",
-				"description": "StartFragment\n\nPUT request for updating value of existing item.\n\nEndFragment"
+				"description": "PUT request for updating value of existing item."
 			},
 			"response": [
 				{
