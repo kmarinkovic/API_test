@@ -1212,6 +1212,21 @@
 						"exec": [
 							"pm.test(\"Unsuccessful GET request - non existing id\", () => {\r",
 							"  pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"GET response test - non existing id\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.type).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.title).to.eql(\"Not Found\");\r",
+							"  pm.expect(jsonData.status).to.be.an(\"number\");\r",
+							"  pm.expect(jsonData.status).to.eql(404);\r",
+							"  pm.expect(jsonData.traceId).to.be.a(\"string\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API response contains the expected header\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\", \"application/problem+json; charset=utf-8\");\r",
 							"});"
 						],
 						"type": "text/javascript"
