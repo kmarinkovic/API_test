@@ -1332,7 +1332,45 @@
 				"header": [],
 				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "a6929e0c-cff7-453f-aa6a-af56fca6c24e",
+					"name": "Delete request by id - non existing id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.2"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Jan 2023 17:57:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"0HMNQNNCBFREB:00000001\"\n}"
+				}
+			]
 		}
 	]
 }
