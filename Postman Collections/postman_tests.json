@@ -1250,7 +1250,7 @@
 				"method": "GET",
 				"header": [],
 				"url": "{{url}}/{{id}}",
-				"description": "StartFragment\n\nGET request for reading single entity defined by id after DELETE operation has been executed."
+				"description": "GET request for reading single entity defined by id after DELETE operation has been executed which results in error 404."
 			},
 			"response": [
 				{
