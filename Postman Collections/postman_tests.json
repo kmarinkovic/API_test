@@ -1249,7 +1249,8 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "StartFragment\n\nGET request for reading single entity defined by id after DELETE operation has been executed."
 			},
 			"response": [
 				{
