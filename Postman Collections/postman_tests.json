@@ -677,7 +677,7 @@
 				"method": "GET",
 				"header": [],
 				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa",
-				"description": "StartFragment\n\nGET request for reading single entity defined by non existing id which results in 404 error.\n\nEndFragment"
+				"description": "GET request for reading single entity defined by non existing id which results in 404 error."
 			},
 			"response": [
 				{
