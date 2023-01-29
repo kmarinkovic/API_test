@@ -481,7 +481,8 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://crudcrud.com/api/endpoint/items"
+				"url": "https://crudcrud.com/api/endpoint/items",
+				"description": "GET request for reading items with non existing \"endpoint\" in url."
 			},
 			"response": [
 				{
