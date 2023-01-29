@@ -328,7 +328,7 @@
 					"script": {
 						"id": "706229cb-39b8-4bbb-b812-fe7c3baa7d53",
 						"exec": [
-							"pm.test(\"Status code is 200\", function(){\r",
+							"pm.test(\"Successful GET request\", function(){\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
