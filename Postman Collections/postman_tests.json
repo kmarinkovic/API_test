@@ -1332,57 +1332,7 @@
 				"header": [],
 				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
 			},
-			"response": [
-				{
-					"id": "973433dc-05c5-497d-8de6-f98473c11dc0",
-					"name": "Delete request by id",
-					"originalRequest": {
-						"method": "DELETE",
-						"header": [],
-						"url": "{{url}}/{{id}}"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "plain",
-					"header": [
-						{
-							"key": "Server",
-							"value": "nginx/1.14.2"
-						},
-						{
-							"key": "Date",
-							"value": "Sat, 28 Jan 2023 21:50:15 GMT"
-						},
-						{
-							"key": "Content-Length",
-							"value": "0"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
-						},
-						{
-							"key": "Access-Control-Expose-Headers",
-							"value": "Content-Length,Content-Range"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": null
-				}
-			]
+			"response": []
 		}
 	]
 }
