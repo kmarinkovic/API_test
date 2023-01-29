@@ -1028,7 +1028,7 @@
 							"});\r",
 							"\r",
 							"const jsonData = pm.response.json();\r",
-							"pm.test(\"Response test\", () => {\r",
+							"pm.test(\"PUT response test - syntax error\", () => {\r",
 							"  pm.expect(jsonData).to.be.an(\"object\");\r",
 							"  pm.expect(jsonData.errors).to.have.nested.property('status');\r",
 							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
