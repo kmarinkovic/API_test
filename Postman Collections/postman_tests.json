@@ -761,7 +761,8 @@
 						}
 					}
 				},
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "StartFragment\n\nPUT request for updating value of existing item.\n\nEndFragment"
 			},
 			"response": [
 				{
