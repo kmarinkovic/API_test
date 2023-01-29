@@ -368,7 +368,8 @@
 						}
 					}
 				},
-				"url": "{{url}}"
+				"url": "{{url}}",
+				"description": "GET request for reading all available items"
 			},
 			"response": [
 				{
