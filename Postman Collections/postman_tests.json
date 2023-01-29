@@ -153,7 +153,7 @@
 							"});\r",
 							"\r",
 							"const jsonData = pm.response.json();\r",
-							"pm.test(\"POST Response test - no body\", () => {\r",
+							"pm.test(\"POST response test - no body\", () => {\r",
 							"  pm.expect(jsonData).to.be.an(\"object\");\r",
 							"  pm.expect(jsonData.type).to.be.a(\"string\");\r",
 							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
