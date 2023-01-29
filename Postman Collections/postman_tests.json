@@ -1076,7 +1076,8 @@
 						}
 					}
 				},
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "StartFragment\n\nPUT request for updating single entity with syntax error in body which results with error 400.\n\nEndFragment"
 			},
 			"response": [
 				{
