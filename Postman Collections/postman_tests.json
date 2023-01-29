@@ -1306,7 +1306,7 @@
 							"});\r",
 							"\r",
 							"const jsonData = pm.response.json();\r",
-							"pm.test(\"Response test\", () => {\r",
+							"pm.test(\"DELETE response test - non existing id\", () => {\r",
 							"  pm.expect(jsonData).to.be.an(\"object\");\r",
 							"  pm.expect(jsonData.type).to.be.a(\"string\");\r",
 							"  pm.expect(jsonData.title).to.be.a(\"string\");\r",
