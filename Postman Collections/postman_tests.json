@@ -978,7 +978,7 @@
 					}
 				},
 				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa",
-				"description": "PUT request for updating single entity with non existing id."
+				"description": "PUT request for updating single entity with non existing id which results with error 404."
 			},
 			"response": [
 				{
