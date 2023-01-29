@@ -2,7 +2,6 @@
 	"info": {
 		"_postman_id": "abc88f8b-443e-48cf-b6fe-729510d03aa6",
 		"name": "API_test",
-		"description": "**#Introduction**  \nThis is introduction to project\n\n#**Prerequisites**  \nThese are prerequisites\n\n#**Setup**  \nHere you can find project setup",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -178,7 +177,8 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "{{url}}"
+				"url": "{{url}}",
+				"description": "POST request without Body - expected error 415"
 			},
 			"response": [
 				{
@@ -368,7 +368,8 @@
 						}
 					}
 				},
-				"url": "{{url}}"
+				"url": "{{url}}",
+				"description": "GET request for reading all available items"
 			},
 			"response": [
 				{
@@ -480,7 +481,8 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://crudcrud.com/api/endpoint/items"
+				"url": "https://crudcrud.com/api/endpoint/items",
+				"description": "GET request for reading items with non existing \"endpoint\" in url."
 			},
 			"response": [
 				{
@@ -577,7 +579,8 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "GET request for reading single entity defined by id."
 			},
 			"response": [
 				{
@@ -673,7 +676,8 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
+				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa",
+				"description": "GET request for reading single entity defined by non existing id which results in 404 error."
 			},
 			"response": [
 				{
@@ -757,7 +761,8 @@
 						}
 					}
 				},
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "PUT request for updating value of existing item."
 			},
 			"response": [
 				{
@@ -865,12 +870,13 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "GET request for reading single entity defined by id after UPDATE operation has been executed to check changed value."
 			},
 			"response": [
 				{
-					"id": "4dca1256-8580-40b5-b99e-17d96154deda",
-					"name": "Read request by id",
+					"id": "278925d9-2c44-447f-b61e-18c5e05510b8",
+					"name": "Read request by id after update",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
@@ -886,7 +892,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Sat, 28 Jan 2023 18:42:40 GMT"
+							"value": "Sun, 29 Jan 2023 17:48:34 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -919,7 +925,7 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "{\n    \"_id\": \"63d55b5507307e03e8c76a3e\",\n    \"name\": \"Item1\",\n    \"description\": \"This is a description of todo Item1\",\n    \"activation_date\": \"1674926933\",\n    \"repeat\": \"weekly\",\n    \"status\": \"not completed\"\n}"
+					"body": "{\n    \"_id\": \"63d6aa6907307e03e8c76daa\",\n    \"name\": \"Item1\",\n    \"description\": \"This is a description of todo Item1\",\n    \"activation_date\": \"1675014508\",\n    \"repeat\": \"weekly\",\n    \"status\": \"completed\"\n}"
 				}
 			]
 		},
@@ -971,7 +977,8 @@
 						}
 					}
 				},
-				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
+				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa",
+				"description": "PUT request for updating single entity with non existing id which results with error 404."
 			},
 			"response": [
 				{
@@ -1069,7 +1076,8 @@
 						}
 					}
 				},
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "PUT request for updating single entity with syntax error in body which results with error 400."
 			},
 			"response": [
 				{
@@ -1153,7 +1161,8 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "DELETE request for deletion of single entity with id."
 			},
 			"response": [
 				{
@@ -1240,7 +1249,8 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "GET request for reading single entity defined by id after DELETE operation has been executed which results in error 404."
 			},
 			"response": [
 				{
@@ -1324,16 +1334,16 @@
 			},
 			"response": [
 				{
-					"id": "973433dc-05c5-497d-8de6-f98473c11dc0",
-					"name": "Delete request by id",
+					"id": "a6929e0c-cff7-453f-aa6a-af56fca6c24e",
+					"name": "Delete request by id - non existing id",
 					"originalRequest": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{url}}/{{id}}"
+						"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa"
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "plain",
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
 					"header": [
 						{
 							"key": "Server",
@@ -1341,36 +1351,24 @@
 						},
 						{
 							"key": "Date",
-							"value": "Sat, 28 Jan 2023 21:50:15 GMT"
+							"value": "Sun, 29 Jan 2023 17:57:54 GMT"
 						},
 						{
-							"key": "Content-Length",
-							"value": "0"
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
 						},
 						{
 							"key": "Connection",
 							"value": "keep-alive"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
-						},
-						{
-							"key": "Access-Control-Expose-Headers",
-							"value": "Content-Length,Content-Range"
 						}
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": null
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"0HMNQNNCBFREB:00000001\"\n}"
 				}
 			]
 		}
