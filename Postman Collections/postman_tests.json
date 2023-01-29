@@ -580,7 +580,7 @@
 				"method": "GET",
 				"header": [],
 				"url": "{{url}}/{{id}}",
-				"description": "StartFragment\n\nGET request for reading single entity defined by id.\n\nEndFragment"
+				"description": "GET request for reading single entity defined by id."
 			},
 			"response": [
 				{
