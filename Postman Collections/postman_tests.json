@@ -978,7 +978,7 @@
 					}
 				},
 				"url": "{{url}}/aaaaaaaaaaaaaaaaaaaaaaaa",
-				"description": "StartFragment\n\nPUT request for updating single entity with non existing id.\n\nEndFragment"
+				"description": "PUT request for updating single entity with non existing id."
 			},
 			"response": [
 				{
