@@ -1161,7 +1161,8 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{url}}/{{id}}"
+				"url": "{{url}}/{{id}}",
+				"description": "StartFragment\n\nDELETE request for deletion of single entity with id."
 			},
 			"response": [
 				{
